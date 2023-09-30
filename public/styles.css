@@ -1,0 +1,64 @@
+#main {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #0059ffb9;
+  border-radius: 30px;
+}
+
+#main h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#main p {
+  padding: 0;
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 0 0 3px #00eeff, 0 0 5px #00eeff;
+}
+
+#city {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 7px;
+  background-color: #00eeff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 3px solid black;
+}
+
+form {
+  margin-top: 50px;
+  text-align: center;
+}
+
+form select {
+  margin-right: 50px;
+}
+
+button {
+  border: 3px solid black;
+  font-size: 20px;
+  padding: 20px 10px;
+  border-radius: 7px;
+  background-color: #00eeff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.other {
+  margin: 20px 0;
+}
+
+label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+input[type="text"] {
+  height: 30px;
+  width: 150px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 26px;
+}

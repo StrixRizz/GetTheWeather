@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>🌍GetTheWeather</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1>
+        <p>Retrieve the tempreture and windspeed</p>
+        <p>Longitute and langitude option available</p>
+      </h1>
+      <form id="form" method="post" action="/get-weather">
+        <select name="city" id="city">
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="berlin">Berlin</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="other">
+          <label for="longitude">Longitude: </label>
+          <input type="text" name="longitude" />
+          <label for="longitude">Latitude: </label>
+          <input type="text" name="latitude" />
+        </div>
+        <button type="submit">Get Weather</button>
+      </form>
+    </main>
+
+    <div class="data">
+      <% if (locals.error) {%>
+      <h1><%= error %></h1>
+      <% } else if (locals.temperature && locals.windspeed) {%>
+      <h2>Temperature: <%= temperature %></h2>
+      <h2>Windspeed: <%= windspeed %></h2>
+      <% } %>
+    </div>
+
+    <script>
+      const selectEl = document.getElementById("city");
+      const otherEl = document.querySelector(".other");
+      otherEl.style.display = "none";
+
+      selectEl.addEventListener("change", (event) => {
+        console.log(selectEl.value);
+        if (selectEl.value === "other") {
+          otherEl.style.display = "block";
+        } else {
+          otherEl.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
